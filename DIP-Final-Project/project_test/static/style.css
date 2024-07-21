@@ -1,0 +1,45 @@
+@keyframes wave-animation {
+    0%, 100% {
+        mask-position: 200% 0%;
+    }
+    50% {
+        mask-position: 0% 0%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 100px;
+}
+
+h1 {
+    font-size: 50px; /* Large font size for the heading */
+    margin-bottom: 40px;
+    margin-top: -20px;
+    background: linear-gradient(-60deg, white, black, black); /* Gradient background on text */
+    -webkit-background-clip: text;
+    color: transparent; /* Keeps the text gradient visible */
+    animation: wave-animation 10s infinite linear; /* Continuous animation effect */
+    background-size: 200% 100%;
+}
+
+#videoContainer {
+    display: flex;
+    justify-content: center; /* Center the video in the div */
+    margin-top: 40px;
+}
+
+img {
+    width: 100%; /* Full width to adjust as needed */
+    border-radius: 4px; /* Rounded corners for the video */
+    padding: 10px; /* Padding around the video */
+    /* Removed the box-shadow property */
+}
